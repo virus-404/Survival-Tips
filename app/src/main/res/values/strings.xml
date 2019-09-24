@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Survival Tips</string>
+    <string name="intro_title">SURVIVAL TIPS</string>
+    <string name="disclaimer">If you are reading this, it means you are in a serious trouble. All what you need to know is in this
+    application. First step you should do, is calm yourself and put the battery saver on, each percentage of this battery is a bullet.
+    Use it wisely! </string>
+    <string name="order">Order</string>
+    <string name="tip_image">Tip image</string>
 </resources>

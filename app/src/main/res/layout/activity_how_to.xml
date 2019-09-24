@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/how_to_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            app:toolbarId="@+id/how_to_toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/how_to_sort_bt"
+                    android:layout_width="58dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    app:layout_anchorGravity="left"
+                    app:srcCompat="@drawable/ic_sort_by_alpha_white_24dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="@string/order"
+                    />
+
+                <EditText
+                    android:id="@+id/how_to_search_bar"
+                    android:layout_width="354dp"
+                    android:layout_height="match_parent"
+                    app:layout_anchorGravity="start|top"
+                    android:queryHint="Search Here"
+                    android:iconifiedByDefault="false"
+                    android:hint=" 	🔍 "/>
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/how_to_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/how_to_add_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="ADD"
+                        style="?android:attr/actionOverflowButtonStyle"/>
+                </RelativeLayout>
+                <View style="@style/Divider.Vertical"/>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <Button
+                        android:id="@+id/how_to_delete_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DELETE"
+                        style="?android:attr/actionOverflowButtonStyle"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

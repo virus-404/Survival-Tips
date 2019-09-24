@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/ussr_army"
+        android:gravity="center"
+        android:text="@string/intro_title"
+        android:textColor="@color/colorText"
+        android:textSize="100sp" />
+
+    <TextView
+        android:id="@+id/disclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/disclaimer"
+        android:textColor="@color/colorText"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/health_ic"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/how_to_ic"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="59dp"
+        android:layout_toStartOf="@+id/diary_ic"
+        android:layout_toEndOf="@+id/tools_ic"
+        android:background="?android:attr/selectableItemBackground"
+        app:srcCompat="@drawable/health" />
+
+    <ImageButton
+        android:id="@+id/diary_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/how_to_ic"
+        android:layout_alignEnd="@+id/disclaimer"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="18dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:srcCompat="@drawable/diary" />
+
+    <ImageButton
+        android:id="@+id/how_to_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/disclaimer"
+        android:layout_alignStart="@+id/disclaimer"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:srcCompat="@drawable/how_to" />
+
+    <ImageButton
+        android:id="@+id/tools_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/how_to_ic"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/how_to_ic"
+        android:background="?android:attr/selectableItemBackground"
+        app:srcCompat="@drawable/tool" />
+
+</RelativeLayout>
