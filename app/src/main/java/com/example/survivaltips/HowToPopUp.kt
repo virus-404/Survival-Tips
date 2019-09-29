@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 
 
-class HowToPopUp (a: Activity, val tip: Tip) : Dialog (a), android.view.View.OnClickListener {
+class HowToPopUp (a: Activity, val tip: Tip) : Dialog (a), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,9 +19,9 @@ class HowToPopUp (a: Activity, val tip: Tip) : Dialog (a), android.view.View.OnC
         val image: ImageView = findViewById(R.id.how_to_show_image)
         val description: TextView = findViewById(R.id.how_to_show_description)
 
-        title.setText(tip.title)
+        title.text = tip.title
         image.setImageResource(tip.image)
-        description.setText(tip.description)
+        description.text = tip.description
 
     }
 
