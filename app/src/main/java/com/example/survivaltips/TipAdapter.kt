@@ -24,8 +24,8 @@ class TipAdapter(var tips: ArrayList<Tip>, val activity: Activity): RecyclerView
         val description : TextView = holder.descriptionView
         val image: ImageView = holder.imageView
 
-        title.setText(tip.title)
-        description.setText(tip.description)
+        title.text = tip.title
+        description.text = tip.description
         image.setImageResource(tip.image)
 
 

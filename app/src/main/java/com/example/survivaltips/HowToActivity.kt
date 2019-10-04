@@ -16,7 +16,6 @@ class HowToActivity : AppCompatActivity(){
     private var tipList: ArrayList <Tip> = ArrayList()
     private var tipQuery: ArrayList <Tip> = ArrayList()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_how_to)
@@ -27,7 +26,7 @@ class HowToActivity : AppCompatActivity(){
         val sortButton: ImageButton = findViewById(R.id.how_to_sort_bt)
         val searchBar: TextView = findViewById(R.id.how_to_search_bar)
         val intent: Intent = getIntent()
-        val wrap: TipWrapper= intent.getSerializableExtra("tips") as TipWrapper
+        val wrap: TipWrapper = intent.getSerializableExtra("tips") as TipWrapper
 
         tipList = wrap.tips
 
@@ -52,7 +51,7 @@ class HowToActivity : AppCompatActivity(){
         searchBar.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
                 tipQuery.clear()
-                tipQuery.addAll(tipList.filter { it.title.startsWith(s.toString())})
+                tipQuery.addAll(tipList.filter { it.title.startsWith(s.toString().toUpperCase())})
                 adapter.tips = tipQuery
                 adapter.notifyDataSetChanged()
             }
