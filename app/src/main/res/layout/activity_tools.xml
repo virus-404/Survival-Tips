@@ -1,6 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
 
-</LinearLayout>
+
+    <ImageButton
+        android:id="@+id/level"
+        android:layout_width="182dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/level"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimaryDark"/>
+
+    <ImageButton
+        android:id="@+id/compass"
+        android:layout_width="182dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/compass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/level"
+        android:background="@color/colorPrimaryDark"/>
+
+    <ImageButton
+        android:id="@+id/caliber"
+        android:layout_width="182dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/caliber"
+        app:layout_constraintBottom_toTopOf="@+id/SOS"
+        app:layout_constraintStart_toStartOf="@+id/level"
+        app:layout_constraintTop_toBottomOf="@+id/compass"
+        app:layout_constraintVertical_bias="0.066"
+        android:background="@color/colorPrimaryDark"/>
+
+    <ImageButton
+        android:id="@+id/SOS"
+        android:layout_width="182dp"
+        android:layout_height="152dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/sos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/compass"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:text="Slope"
+        app:layout_constraintBottom_toBottomOf="@+id/level"
+        app:layout_constraintStart_toEndOf="@+id/level"
+        app:layout_constraintTop_toTopOf="@+id/level"
+        app:layout_constraintVertical_bias="0.507" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:text="Compass"
+        app:layout_constraintBottom_toBottomOf="@+id/compass"
+        app:layout_constraintEnd_toStartOf="@+id/compass"
+        app:layout_constraintTop_toTopOf="@+id/compass" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:text="Coordinates"
+        app:layout_constraintBottom_toBottomOf="@+id/caliber"
+        app:layout_constraintStart_toEndOf="@+id/caliber"
+        app:layout_constraintTop_toTopOf="@+id/caliber"
+        app:layout_constraintVertical_bias="0.492" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:text="S.O.S morse"
+        app:layout_constraintBottom_toBottomOf="@+id/SOS"
+        app:layout_constraintEnd_toStartOf="@+id/SOS"
+        app:layout_constraintTop_toTopOf="@+id/SOS"
+        app:layout_constraintVertical_bias="0.492" />
+</androidx.constraintlayout.widget.ConstraintLayout>

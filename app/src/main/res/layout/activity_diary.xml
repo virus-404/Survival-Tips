@@ -13,21 +13,33 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:text="@string/sync" />
+        android:text="@string/sync"
+        android:background="@drawable/button_shape"
+        />
 
     <EditText
         android:id="@+id/diary_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="683dp"
         android:layout_below="@+id/sync"
         android:layout_marginTop="0dp"
+        android:autofillHints="Write here ..."
         android:gravity="top|start"
         android:inputType="textMultiLine"
-        android:lines="8"
-        android:maxLines="10"
         android:minLines="6"
         android:scrollbars="vertical"
-        android:autofillHints="Write here ..."
-        tools:targetApi="o"
-        tools:ignore="LabelFor" />
+        tools:ignore="LabelFor"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="285dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/diary_text"
+        android:layout_alignStart="@+id/diary_text"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/diary"
+        android:textSize="30dp"
+        android:gravity="center"/>
 </RelativeLayout>
