@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.survivaltips">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission-group.CAMERA"/>
+    <uses-permission android:name=" android.permission-group.SENSORS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +17,6 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -20,10 +24,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".HowToActivity" />
-        <activity android:name=".HealthActivity" />
-        <activity android:name=".ToolsActivity" />
-        <activity android:name=".DiaryActivity" />
+        <activity android:name="com.example.survivaltips.howto.Activity" />
+        <activity android:name="com.example.survivaltips.howto.AddActivity"/>
+        <activity android:name="com.example.survivaltips.health.Activity" />
+        <activity android:name="com.example.survivaltips.tools.Activity" />
+        <activity android:name="com.example.survivaltips.diary.Activity" />
 
 
     </application>

@@ -20,32 +20,31 @@
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
             app:toolbarId="@+id/how_to_toolbar">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <ImageButton
-                    android:id="@+id/how_to_sort_bt"
-                    android:layout_width="58dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="0dp"
-                    app:layout_anchorGravity="left"
-                    app:srcCompat="@drawable/ic_sort_by_alpha_white_24dp"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:contentDescription="@string/order"
-                    />
 
                 <EditText
                     android:id="@+id/how_to_search_bar"
                     android:layout_width="354dp"
                     android:layout_height="match_parent"
-                    app:layout_anchorGravity="start|top"
-                    android:queryHint="Search Here"
+                    android:layout_marginEnd="0dp"
+                    android:hint=" 	🔍  Search"
                     android:iconifiedByDefault="false"
-                    android:hint=" 	🔍 "/>
+                    android:queryHint="Search Here"
+                    app:layout_anchorGravity="start|top" />
 
-            </RelativeLayout>
+                <ImageButton
+                    android:id="@+id/how_to_sort_bt"
+                    android:layout_width="58dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="0dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="@string/order"
+                    app:layout_anchorGravity="left"
+                    app:srcCompat="@drawable/ic_sort_by_alpha_white_24dp" />
+
+            </LinearLayout>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
