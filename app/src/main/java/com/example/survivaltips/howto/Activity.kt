@@ -70,7 +70,8 @@ class Activity : AppCompatActivity(){
 
         searchBar.addTextChangedListener(object : TextWatcher {
           override fun afterTextChanged(s: Editable) {
-
+            if(s.isNotBlank()) tipViewModel.getTipByName(s.toString().toLowerCase())
+              else tipViewModel.loadAll()
           }
 
           override fun beforeTextChanged(s: CharSequence, start: Int,

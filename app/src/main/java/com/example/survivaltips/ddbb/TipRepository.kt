@@ -16,16 +16,23 @@ class TipRepository (private val tipDAO: TipDAO){
     // The suspend modifier tells the compiler that this must be called from a
     // coroutine or another suspend function.
 
+    fun loadAll(): LiveData<List<Tip>> {
+        return tipDAO.getAll()
+    }
+
     suspend fun insert (tip: Tip){
         tipDAO.insert(tip)
     }
 
+    suspend fun delete (tip: Tip) {
+        tipDAO.delete(tip)
+    }
+
     fun getAlphabetizedTips (): LiveData<List<Tip>> {
-        Log.i("Alphabet", tipDAO.getAlphabetizedTips().toString())
         return tipDAO.getAlphabetizedTips()
     }
 
-    suspend fun delete (tip: Tip) {
-        tipDAO.delete(tip)
+    fun getTipByName(name: String):  LiveData<List<Tip>>{
+        return tipDAO.findByName(name)
     }
 }

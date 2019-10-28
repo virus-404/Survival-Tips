@@ -8,8 +8,8 @@ interface TipDAO {
     @Query("SELECT * FROM tip_table ")
     fun getAll(): LiveData<List<Tip>>
 
-    @Query("SELECT * FROM tip_table WHERE title LIKE :title")
-    fun findByName(title: String): Tip
+    @Query("SELECT * FROM tip_table WHERE title LIKE :name")
+    fun findByName(name: String): LiveData<List<Tip>>
 
     @Query("SELECT * FROM tip_table ORDER BY title ASC")
     fun getAlphabetizedTips(): LiveData<List<Tip>>
