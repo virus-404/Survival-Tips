@@ -39,7 +39,7 @@ class TipListAdapter(val context: Context): RecyclerView.Adapter<TipListAdapter.
 
         holder.imageView.setOnClickListener {
             if (delete) {
-
+                com.example.survivaltips.howto.Activity.tipViewModel.delete(current)
             } else {
                 val cdd = PopUp(context as Activity, current)
                 cdd.show()
@@ -53,9 +53,9 @@ class TipListAdapter(val context: Context): RecyclerView.Adapter<TipListAdapter.
         notifyDataSetChanged()
     }
 
-    override fun getItemCount(): Int {
-        return tips.size
-    }
+    override fun getItemCount() = tips.size
+
+
 
     /*
 

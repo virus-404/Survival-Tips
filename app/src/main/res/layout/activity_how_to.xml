@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/how_to_layout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -20,31 +21,32 @@
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
             app:toolbarId="@+id/how_to_toolbar">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <EditText
-                    android:id="@+id/how_to_search_bar"
-                    android:layout_width="354dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="0dp"
-                    android:hint=" 	🔍  Search"
-                    android:iconifiedByDefault="false"
-                    android:queryHint="Search Here"
-                    app:layout_anchorGravity="start|top" />
 
                 <ImageButton
                     android:id="@+id/how_to_sort_bt"
                     android:layout_width="58dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="0dp"
                     android:background="?android:attr/selectableItemBackground"
                     android:contentDescription="@string/order"
                     app:layout_anchorGravity="left"
-                    app:srcCompat="@drawable/ic_sort_by_alpha_white_24dp" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/ic_sort_by_alpha_white_24dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
-            </LinearLayout>
+                <EditText
+                    android:id="@+id/how_to_search_bar"
+                    android:layout_width="354dp"
+                    android:layout_height="match_parent"
+                    android:hint=" 	🔍  Search"
+                    android:iconifiedByDefault="false"
+                    android:queryHint="Search Here"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="0dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -72,6 +74,7 @@
                         android:layout_height="match_parent"
                         android:text="ADD"
                         style="?android:attr/actionOverflowButtonStyle"/>
+
                 </RelativeLayout>
                 <View style="@style/Divider.Vertical"/>
                 <RelativeLayout
@@ -100,7 +103,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

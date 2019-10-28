@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity (tableName = "tip_table")
 data class Tip(
-    @PrimaryKey (autoGenerate = true) var id: Long? = null,
+    @PrimaryKey (autoGenerate = true)  var id: Long?,
     @ColumnInfo(name = "Title") var title: String,
     @ColumnInfo(name = "Image") var Image: String,
     @ColumnInfo(name = "Description") var description: String

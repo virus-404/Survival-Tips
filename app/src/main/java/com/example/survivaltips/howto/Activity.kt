@@ -18,9 +18,14 @@ import com.example.survivaltips.ddbb.Tip
 import com.example.survivaltips.ddbb.TipViewModel
 
 
+
+
+
 class Activity : AppCompatActivity(){
 
-    private lateinit var tipViewModel: TipViewModel
+    companion object {
+        lateinit var tipViewModel: TipViewModel
+    }
 
     val NEW_TIP_ACTIVITY_REQUEST_CODE = 1
 
@@ -38,10 +43,11 @@ class Activity : AppCompatActivity(){
         tipViewModel = ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory(this.application))
             .get(TipViewModel::class.java)
 
-        tipViewModel.getAllTips().observe(this, Observer { tips ->
-            // Update the cached copy of the words in the adapter.
-            tips?.let { adapter.setTips(it) }
-        })
+        tipViewModel.allTips.observe(this,
+            Observer<List<Tip>> { tips ->
+                // Update the cached copy of the tips in the adapter.
+                tips!!.let { adapter.setTips(tips)}
+            })
 
         val addButton: Button = findViewById(R.id.how_to_add_bt)
         val delButton: Button = findViewById(R.id.how_to_delete_bt)
@@ -55,18 +61,16 @@ class Activity : AppCompatActivity(){
         }
 
         delButton.setOnClickListener {
-          TipListAdapter.delete = true
+            TipListAdapter.delete = !TipListAdapter.delete
         }
 
         sortButton.setOnClickListener {
-          Toast.makeText(this,adapter.itemCount.toString(), Toast.LENGTH_SHORT).show()
+            tipViewModel.getAlphabetizedTips()
         }
 
         searchBar.addTextChangedListener(object : TextWatcher {
           override fun afterTextChanged(s: Editable) {
-              //tipQuery.addAll(tipList.filter { it.title.startsWith(s.toString().toUpperCase())})
-             // adapter.tips = tipQuery
-              //adapter.notifyDataSetChanged()
+
           }
 
           override fun beforeTextChanged(s: CharSequence, start: Int,
@@ -89,7 +93,7 @@ class Activity : AppCompatActivity(){
                 val title: String = it.getStringExtra(AddActivity.TITLE)!!
                 val image: String =  it.getStringExtra(AddActivity.IMAGE)!!
                 Toast.makeText(this, "You have created a tip succesfully",Toast.LENGTH_SHORT).show()
-                val tip = Tip (0,title, image, description)
+                val tip = Tip (null,title, image, description)
                 tipViewModel.insert(tip)
             }
         } else {
