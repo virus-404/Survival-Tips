@@ -27,9 +27,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:padding="10dp"
                     android:text="@string/heath_info"
-                    android:textSize="30sp"
-                    android:gravity="center"/>
+                    android:textSize="30sp" />
 
             </RelativeLayout>
 
@@ -39,8 +42,19 @@
             android:id="@+id/health_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             app:contentInsetLeft="0dp"
             app:contentInsetStart="0dp">
+
+            <ProgressBar
+                android:id="@+id/health_progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:maxHeight="0.5dp"
+                android:progressDrawable="@drawable/gradient_progress"
+                android:progress="0"/>
 
 
         </androidx.appcompat.widget.Toolbar>
@@ -51,367 +65,38 @@
             android:orientation="vertical"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-           <LinearLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content">
-
-               <ImageView
-                   android:layout_width="65dp"
-                   android:layout_height="59dp"
-                   android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
-
-               <TextView
-                   android:layout_width="351dp"
-                   android:layout_height="match_parent"
-                   android:layout_gravity="center"
-                   android:layout_weight="1"
-                   android:text="DUMIEEEEEEEEE"
-                   android:gravity="center_vertical"
-                   android:textSize="20sp" />
-
-           </LinearLayout>
-
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:theme="@style/Theme.MaterialComponents.Light">
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Extremly "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Very much"
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Normal "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Really Few"
-                        android:textSize="15sp" />
-
-                </com.google.android.material.chip.ChipGroup>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:layout_width="65dp"
-                    android:layout_height="59dp"
-                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
-
-                <TextView
-                    android:layout_width="351dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="DUMIEEEEEEEEE"
-                    android:gravity="center_vertical"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:theme="@style/Theme.MaterialComponents.Light">
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Extremly "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Very much"
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Normal "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Really Few"
-                        android:textSize="15sp" />
-
-                </com.google.android.material.chip.ChipGroup>
-            </LinearLayout><LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="65dp"
-                android:layout_height="59dp"
-                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
-
-            <TextView
-                android:layout_width="351dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="DUMIEEEEEEEEE"
-                android:gravity="center_vertical"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:theme="@style/Theme.MaterialComponents.Light">
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Extremly "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Very much"
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Normal "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Really Few"
-                        android:textSize="15sp" />
-
-                </com.google.android.material.chip.ChipGroup>
-            </LinearLayout><LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="65dp"
-                android:layout_height="59dp"
-                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
-
-            <TextView
-                android:layout_width="351dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="DUMIEEEEEEEEE"
-                android:gravity="center_vertical"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:theme="@style/Theme.MaterialComponents.Light">
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Extremly "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Very much"
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Normal "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Really Few"
-                        android:textSize="15sp" />
-
-                </com.google.android.material.chip.ChipGroup>
-            </LinearLayout><LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="65dp"
-                android:layout_height="59dp"
-                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
-
-            <TextView
-                android:layout_width="351dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="DUMIEEEEEEEEE"
-                android:gravity="center_vertical"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center">
-
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:theme="@style/Theme.MaterialComponents.Light">
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Extremly "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Very much"
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Normal "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Really Few"
-                        android:textSize="15sp" />
-
-                </com.google.android.material.chip.ChipGroup>
-            </LinearLayout><LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/check_check_1"
-                android:layout_width="65dp"
-                android:layout_height="59dp"
-                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
-
-            <TextView
-                android:id="@+id/check_desc_1"
-                android:layout_width="351dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="DUMIEEEEEEEEE"
-                android:gravity="center_vertical"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:theme="@style/Theme.MaterialComponents.Light">
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Extremly "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Very much"
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Normal "
-                        android:textSize="15sp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Really Few"
-                        android:textSize="15sp" />
-
-                </com.google.android.material.chip.ChipGroup>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/health_check_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical">
+
                 <TextView
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Press check to see the results:"
-                    android:gravity="center" />
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/health_info_button" />
 
                 <Button
-                    android:layout_marginTop="30dp"
+                    android:id="@+id/health_check_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="163dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginEnd="160dp"
                     android:layout_marginBottom="16dp"
-                    android:background="@color/colorPrimary"
-                    android:text="Check" />
+                    android:background="@drawable/button_selector"
+                    android:text="@string/check_health" />
             </LinearLayout>
 
         </LinearLayout>

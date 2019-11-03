@@ -9,4 +9,6 @@
     <string name="heath_info">Health check</string>
     <string name="sync">Sync</string>
     <string name="diary">DIARY ☻</string>
+    <string name="check_health">Check</string>
+    <string name="health_info_button">Press check to see the results:</string>
 </resources>

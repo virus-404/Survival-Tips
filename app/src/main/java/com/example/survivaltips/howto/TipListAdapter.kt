@@ -2,7 +2,6 @@ package com.example.survivaltips.howto
 
 import android.app.Activity
 import android.content.Context
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.survivaltips.R
 import com.example.survivaltips.ddbb.Tip
-import kotlin.collections.ArrayList
 
-class TipListAdapter(val context: Context): RecyclerView.Adapter<TipListAdapter.TipViewHolder>(){
+class TipListAdapter(private val context: Context): RecyclerView.Adapter<TipListAdapter.TipViewHolder>(){
 
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -55,19 +53,7 @@ class TipListAdapter(val context: Context): RecyclerView.Adapter<TipListAdapter.
 
     override fun getItemCount() = tips.size
 
-
-
-    /*
-
-    fun orderItem() {
-        tips.sortBy { tip -> tip.title }
-        notifyDataSetChanged()
-    }
-
-     */
-
     companion object {
         var delete: Boolean = false
     }
-
 }
