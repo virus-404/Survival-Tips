@@ -18,6 +18,7 @@ class PopUp (a: Activity, val tip: Tip) : Dialog (a), View.OnClickListener {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.show_how_to)
+
         val title: TextView = findViewById(R.id.how_to_show_title)
         val image: ImageView = findViewById(R.id.how_to_show_image)
         val description: TextView = findViewById(R.id.how_to_show_description)

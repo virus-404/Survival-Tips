@@ -39,8 +39,8 @@ class TipListAdapter(private val context: Context): RecyclerView.Adapter<TipList
             if (delete) {
                 com.example.survivaltips.howto.Activity.tipViewModel.delete(current)
             } else {
-                val cdd = PopUp(context as Activity, current)
-                cdd.show()
+                val popUp = PopUp(context as Activity, current)
+                popUp.show()
             }
 
         }

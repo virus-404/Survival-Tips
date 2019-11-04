@@ -12,7 +12,7 @@ import android.view.View;
 
 public class DrawView  extends View {
 
-    public boolean fillFlag = false;
+    private boolean fillFlag = false;
 
     public DrawView(Context context){
         super(context);
@@ -39,7 +39,7 @@ public class DrawView  extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         int width = getWidth();
-        int heigh = getHeight();
+        int height = getHeight();
         Paint paint = new Paint();
 
         paint.setColor(Color.RED);
@@ -50,8 +50,8 @@ public class DrawView  extends View {
         paint.setStrokeWidth(10f);
 
         Point point1_draw = new Point(width/2, 0);
-        Point point2_draw = new Point(0, heigh);
-        Point point3_draw = new Point(width, heigh);
+        Point point2_draw = new Point(0, height);
+        Point point3_draw = new Point(width, height);
 
         Path path = new Path();
         path.moveTo(point1_draw.x, point1_draw.y);
