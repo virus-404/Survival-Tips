@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/title_coordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Live Acceleratiom"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tools_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="68dp"
+        android:text="X:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_coordinate" />
+
+
+    <TextView
+        android:id="@+id/tools_x_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="124dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tools_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tools_x"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tools_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Y:"
+        app:layout_constraintEnd_toEndOf="@+id/tools_x"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tools_x"
+        app:layout_constraintTop_toBottomOf="@+id/tools_x" />
+
+
+    <TextView
+        android:id="@+id/tools_y_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tools_y"
+        app:layout_constraintEnd_toEndOf="@+id/tools_x_value"
+        app:layout_constraintStart_toStartOf="@+id/tools_x_value"
+        app:layout_constraintTop_toTopOf="@+id/tools_y" />
+
+
+    <TextView
+        android:id="@+id/tools_z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Z:"
+        app:layout_constraintEnd_toEndOf="@+id/tools_y"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tools_y"
+        app:layout_constraintTop_toBottomOf="@+id/tools_y" />
+
+    <TextView
+        android:id="@+id/tools_z_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tools_z"
+        app:layout_constraintEnd_toEndOf="@+id/tools_y_value"
+        app:layout_constraintStart_toStartOf="@+id/tools_y_value"
+        app:layout_constraintTop_toTopOf="@+id/tools_z" />
+
+
+    <TextView
+        android:id="@+id/tools_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Position:"
+        app:layout_constraintEnd_toEndOf="@+id/tools_z"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/tools_z"
+        app:layout_constraintTop_toBottomOf="@+id/tools_z" />
+
+    <TextView
+        android:id="@+id/tools_position_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tools_position"
+        app:layout_constraintEnd_toEndOf="@+id/tools_z_value"
+        app:layout_constraintStart_toStartOf="@+id/tools_z_value"
+        app:layout_constraintTop_toTopOf="@+id/tools_position" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

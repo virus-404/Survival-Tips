@@ -13,4 +13,4 @@ data class Tip(
 )
 
 
-//https://codelabs.developers.google.com/codelabs/android-room-with-a-view-kotlin/#0
+// TODO https://codelabs.developers.google.com/codelabs/android-room-with-a-view-kotlin/#0

@@ -28,25 +28,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <ImageButton
-        android:id="@+id/add_image"
-        android:layout_width="280dp"
-        android:layout_height="227dp"
-        android:layout_gravity="center"
-        android:background="@color/colorPrimaryDark"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_image"
-        app:layout_constraintBottom_toTopOf="@+id/add_description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_title"
-        app:layout_constraintVertical_bias="0.4" />
 
     <EditText
         android:id="@+id/add_description"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="243dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="180dp"
         android:hint="Description"
         android:inputType="textMultiLine"
         android:minLines="6"

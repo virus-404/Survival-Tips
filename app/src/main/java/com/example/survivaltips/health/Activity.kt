@@ -1,12 +1,9 @@
 package com.example.survivaltips.health
 
 import android.annotation.SuppressLint
-import android.app.Dialog
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.view.View.NO_ID
-import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
@@ -19,16 +16,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.survivaltips.R
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import kotlinx.coroutines.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 import java.io.IOException
 import java.lang.Thread.sleep
 import java.net.URL
-
-
-
-
-
-
 
 class Activity : AppCompatActivity() , Animation.AnimationListener {
 
@@ -90,7 +83,7 @@ class Activity : AppCompatActivity() , Animation.AnimationListener {
 
     override fun onAnimationEnd(animation: Animation) {
         // Take any action after completing the animation
-        val popUp = PopUp(this,fill = false)
+        val popUp = PopUp(this,fill = true)
         popUp.show()
 
     }
@@ -98,10 +91,6 @@ class Activity : AppCompatActivity() , Animation.AnimationListener {
     override fun onAnimationRepeat(animation: Animation) {}
 
     override fun onAnimationStart(animation: Animation) {}
-    /*
-
-                 popUp.blink()
-     */
 
     fun progress(increment: Boolean) {
         if (increment) progressBar.progress +=1

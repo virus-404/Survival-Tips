@@ -11,4 +11,6 @@
     <string name="diary">DIARY ☻</string>
     <string name="check_health">Check</string>
     <string name="health_info_button">Press check to see the results:</string>
+    <string name="compass">Compass</string>
+    <string name="coordinates">Coordinates</string>
 </resources>

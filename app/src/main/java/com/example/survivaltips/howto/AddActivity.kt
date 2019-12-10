@@ -26,21 +26,7 @@ class AddActivity : AppCompatActivity (){
         setContentView(R.layout.add_how_to)
 
         title = findViewById(R.id.add_title)
-        image = findViewById(R.id.add_image)
         description = findViewById(R.id.add_description)
-
-
-        /*
-        image.setOnClickListener {
-            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-            intent.type = "image/*"
-            val mimeTypes: Array<String> = arrayOf("image/jpeg", "image/png")
-            intent.putExtra(Intent.EXTRA_MIME_TYPES,mimeTypes)
-            //startActivityForResult(intent, RESULT_LOAD_IMAGE)
-        }
-
-         */
-         */
 
         val button: Button = findViewById(R.id.add_button_save)
 
@@ -59,20 +45,6 @@ class AddActivity : AppCompatActivity (){
         }
     }
 
-    /*
-    override fun onActivityResult(requestCode: Int, resultCode: Int,  data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
-            val selectedImage: Uri = data.data!!
-            replyIntent.putExtra(IMAGE, selectedImage.toString())
-            image.setImageURI(selectedImage)
-            Toast.makeText(this, "You have picked Image succesfully", Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(this, "You haven't picked Image", Toast.LENGTH_SHORT).show()
-        }
-    }
-    */
     companion object {
         const val TITLE = "com.example.android.survivaltip.TITLE"
         const val IMAGE = "com.example.android.survivaltip.IMAGE"

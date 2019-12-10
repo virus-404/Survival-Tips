@@ -1,6 +1,8 @@
 package com.example.survivaltips.howto
 
+import android.R.attr.button
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,6 +11,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,9 +19,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.survivaltips.R
 import com.example.survivaltips.ddbb.Tip
 import com.example.survivaltips.ddbb.TipViewModel
-
-
-
 
 
 class Activity : AppCompatActivity(){
@@ -62,6 +62,13 @@ class Activity : AppCompatActivity(){
 
         delButton.setOnClickListener {
             TipListAdapter.delete = !TipListAdapter.delete
+
+            if (TipListAdapter.delete) {
+                delButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary))
+            } else {
+                delButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark))
+            }
+
         }
 
         sortButton.setOnClickListener {
